@@ -1,0 +1,38 @@
+- Are there policy documents?
+
+https://www.bbc.com/aboutthebbc/reports/policies
+
+- What is communicated on the website?
+
+Mainly they produce programmes and services for audiences throughout the UK. They also produce content which can be enjoyed across the globe like UK public services, Global news services, and Commercial Services.
+
+- Are there defined values?
+
+Not clearly defined from their websites, but it is clear that the BBC has defined values. From this https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf, There are defined values from reader perspective which are reliability, bias, familiarity, quality etc.
+
+- Are there defined target audiences
+
+Their main target audiences is audiences from UK. But there are audiences from around the globe too. They also provides language translation from their content up to 29 languages.
+
+- What does the VOD service look like?
+
+So the VODs from BBC sorted daily with multiple episode every 15 or 30 minutes. The content itself includes the live news and some special content of some specific topics.
+
+- What is your take on broadcaster?
+
+With so many accusation starting from racism, homophobia, and other accusation, I personally think that BBC is still one of the best public broadcaster in UK (take it with grain of salt because i'm not the main audience and never read directly from BBC
+
+
+Design a research strategy and think about target audience(s)
+
+-How would approach this?
+
+First, i think we need to get audiences demographics or characteristic. It will be helpful to create behavioral (based on previous media use and the similarity of consumed content), collaborative (recommendations based on users with a similar consumption profile), or user-knowledge (User input based)  based filtering. 
+
+-How to get more insight into the target audiences?
+
+You can get it by 
+
+-Which methods?
+-Which audiences?
+-Develop an assumption-based persona
