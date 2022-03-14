@@ -3,4 +3,4 @@ pandas
 numpy
 random
 string
-scikit-learn
+sklearn
