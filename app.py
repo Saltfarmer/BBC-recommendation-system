@@ -67,6 +67,5 @@ def keychanger(keymaker):
 for i in range(5):
     with columns[i]:
       keymaker = df[df['title'] == sample['title'].iloc[i]].index.tolist()[0]
-      st.markdown(keymaker) 
       st.button(sample['title'].iloc[i], on_click=keychanger, args=(keymaker, ))
       st.image(sample['image'].iloc[i])
