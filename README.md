@@ -52,7 +52,17 @@ The clustering itself works by the `k` cluster that the user is free to choose s
 
 *There is a comprehensive and transparent account for the different motivations behind concrete design choices. Different challenges are critically addressed and arguments for the chosen approach are not only convincing but close to optimal.*
 
+![](C:\Users\SaltFarmer\AppData\Roaming\marktext\images\2022-03-14-10-54-06-image.png)
 
+First, the system will show the user completely a random recommendation of content from BBC. The interface will show the user the poster, title, small description, keyword of the content, and an option to watch the content if the user is interested with the recommendation.
+
+![](C:\Users\SaltFarmer\AppData\Roaming\marktext\images\2022-03-14-10-58-01-image.png)
+
+And then given the flexibility, the user can choose the number of `k` cluster of k-means clustering which provides the user ability to choose the number of clusters of all of the content descriptions. Also, the user can choose which specific category of the recommendation.
+
+
+
+Then the last part it show 5 random recommendations for the user which has similar description and same category that user choose. 
 
 ## Conclusion
 
