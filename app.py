@@ -38,7 +38,7 @@ st.title("How does it works ? ")
 st.markdown("The systems works by randomly recommending based on clustering with K-Means and the specific category that user choose. The idea of k-means is that we assume there are k groups in our dataset. We then try to group the data into those k groups. Each group is described by a single point known as a centroid. The centroid of a cluster is the mean value of the points within the cluster. In this case as a user, you are free to choose the number of `k` cluster. Later on the system will consider your input on the number of cluster and category to create recommendations.")
 
 # Clustering process
-cluster = st.slider("Choose number of clusters", 2, 10)
+cluster = st.slider("Choose number of clusters", 2, 10, value=5)
 
 list_description = df['description'].tolist()
 
