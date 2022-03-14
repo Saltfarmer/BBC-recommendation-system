@@ -12,11 +12,11 @@ df = pd.read_csv('BBC_metadata.csv')
 
 st.title("BBC recommendation system (content based)")
 st.title("")
-# st.image("https://ichef.bbci.co.uk/images/ic/1920x1080/p09xtmrp.jpg")
 
 # create a cover and info column to display the selected book
 cover, info = st.columns([2, 3])
 
+# Choosing random default key in state session
 if 'key' not in st.session_state:
   st.session_state['key'] = random.randint(0, len(df))
 
@@ -30,12 +30,14 @@ with info:
   # display the book information
   st.header(df['title'].iloc[key])
   st.markdown(df['description'].iloc[key])  
-  st.caption("Keywords : " + df['keywords'].iloc[key])
   st.markdown("# [Watch It](" + df['url'].iloc[key] + ")", unsafe_allow_html=True)
+  st.caption("Keywords : " + df['keywords'].iloc[key])
 
-# Clustering
-st.title("What is K-means ?")
-st.markdown("The idea of k-means is that we assume there are k groups in our dataset. We then try to group the data into those k groups. Each group is described by a single point known as a centroid. The centroid of a cluster is the mean value of the points within the cluster. So as a user, you are free to choose the number of `k` cluster")
+# Clustering 
+st.title("How does it works ? ")
+st.markdown("The systems works by randomly recommending based on clustering with K-Means and the specific category that user choose. The idea of k-means is that we assume there are k groups in our dataset. We then try to group the data into those k groups. Each group is described by a single point known as a centroid. The centroid of a cluster is the mean value of the points within the cluster. In this case as a user, you are free to choose the number of `k` cluster. Later on the system will consider your input on the number of cluster and category to create recommendations.")
+
+# Clustering process
 cluster = st.slider("Choose number of clusters", 2, 10)
 
 list_description = df['description'].tolist()
@@ -53,12 +55,10 @@ df['cluster'] = kmeans.labels_
 
 # st.dataframe(df.head(10))
 
-# Let user choose the category
-choice = st.selectbox("Choose the category", df['category'].unique().tolist())
-
 # Showing recommendation according to random same cluster
-sample = df[(df['cluster'] == df['cluster'].iloc[key]) & (df['category'] == choice)].sample(n=5)
+sample1 = df[df['cluster'] == df['cluster'].iloc[key]].sample(n=5)
 
+st.title("5 Recommendation based on description cluster and random category")
 columns = st.columns(5)
 
 def keychanger(keymaker):
@@ -66,6 +66,21 @@ def keychanger(keymaker):
 
 for i in range(5):
     with columns[i]:
-      keymaker = df[df['title'] == sample['title'].iloc[i]].index.tolist()[0]
-      st.button(sample['title'].iloc[i], on_click=keychanger, args=(keymaker, ))
-      st.image(sample['image'].iloc[i])
+      keymaker = df[df['title'] == sample1['title'].iloc[i]].index.tolist()[0]
+      st.button(sample1['title'].iloc[i], on_click=keychanger, args=(keymaker, ))
+      st.image(sample1['image'].iloc[i])
+
+st.title("5 Recommendation based on description cluster and category")
+# Let user choose the category
+choice = st.selectbox("Choose the category", df['category'].unique().tolist(), index=df['category'].unique().tolist().index(df['category'].iloc[key]))
+
+# Showing recommendation according to random same cluster and category
+sample2 = df[(df['cluster'] == df['cluster'].iloc[key]) & (df['category'] == choice)].sample(n=5)
+
+columns = st.columns(5)
+
+for i in range(5):
+    with columns[i]:
+      keymaker = df[df['title'] == sample2['title'].iloc[i]].index.tolist()[0]
+      st.button(sample2['title'].iloc[i], on_click=keychanger, args=(keymaker, ))
+      st.image(sample2['image'].iloc[i])
