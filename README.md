@@ -34,15 +34,15 @@ The clustering itself works by the `k` cluster that the user is free to choose s
 
 ## Interface Design
 
-![image](C:\Users\SaltFarmer\Documents\GitHub\BBC-recommendation-system\img_1.png)
+![image](img_1.png)
 
 First, the system will show the user completey a random recommendation of content from BBC. The interface will show the user the poster, title, small description, keyword of the content, and an option to watch the content if the user is interested in the recommendation. This interface will work as the starting point of the other recommendations.
 
-![image](C:\Users\SaltFarmer\Documents\GitHub\BBC-recommendation-system\img_2.png)
+![image](img_2.png)
 
 The second part is where when the user gives their transparency and control. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and control how many clusters did they choose on K-means clustering
 
-![image](C:\Users\SaltFarmer\Documents\GitHub\BBC-recommendation-system\img_3.png)
+![image](img_3.png)
 
 Then the last part shows 5 random recommendations for the user which have a similar description and the same category that the user chooses. Given more recommendations and more controls from the user. 
 
