@@ -16,7 +16,7 @@ In this recommender system prototype, I am trying to apply transparency and cont
 
 ## Literature Reviews
 
-The content-based news recommendation system is already has been researched by [Kompan & Bielikova, 2010](Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.). The paper recommendation system uses Title, Article content, Names & Places, Keywords, Category, and Coleman-Liau Index (CLI). For the recommendation part, they use Cosine-Similarity as similarity measurement as a recommendation of one article to another article. In my case, I am using **K-Means clustering ** as a recommendation for the related content. 
+The content-based news recommendation system is already has been researched by [Kompan & Bielikova, 2010](Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.). The paper recommendation system uses Title, Article content, Names & Places, Keywords, Category, and Coleman-Liau Index (CLI). For the recommendation part, they use Cosine-Similarity as similarity measurement as a recommendation of one article to another article. In my case, **I am using K-Means clustering as a recommendation for the related content**. 
 
 From the perspective of BBC as a provider, based on the [2020-2021 Annual Report](https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf#page=20) I can get the value from the provider. According to the report, there are 5 things to measure audience performance started from. One of them is to **provide impartial news and information to help people to understand and engage with the world around them**.  This recommendation system will provide you with more engaging news and interesting news depending either on only the same cluster or the same cluster and the same category. 
 
@@ -36,23 +36,31 @@ The clustering itself works by the `k` cluster that the user is free to choose s
 
 ## Interface Design
 
+![image](img-1.png)
 
+First, the system will show the user the explanation the source of the dataset and how do I collect that dataset. Then it will show you some sample of the dataset. It will helps at supporting of transparency value of user as a stakeholder.
 
-First, the system will show the user complete a random recommendation of content from BBC. The interface will show the user the poster, title, small description, keyword of the content, and an option to watch the content if the user is interested in the recommendation. This interface will work as the starting point of the other recommendations.
+![image](img-2.png)
 
+The next step of recommendation system is to show complete a random recommendation of content from BBC. The interface will show the user the poster, title, small description, keyword of the content, and an option to watch the content if the user is interested in the recommendation. This interface will work as the starting point of the other recommendations.
 
+![image](img-3.png)
 
-The second part is where when the user gives their transparency and control. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and control how many clusters did they choose on K-means clustering
+The second part is where when the user gives their transparency and control. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and control how many clusters did they choose on K-means clustering. Later o,n it will show another sample of clustered data.
 
+![image](img-4.png)
 
+In this part, the recommendation system will give you 5 random recommendations based on the same cluster as content from the starting point. In this design, users can click the recommendation so they make the content into the starting point and create a new recommendation.
 
-Then the last part shows 5 random recommendations for the user which have a similar description and the same category that the user chooses. Given more recommendations and more controls from the user. 
+![image](img-5.png)
+
+Finally, the user also can get a different type of recommendation looking at the same category of content. It will give the user more recommendations and more controls from user.
 
 ## Conclusion
 
 So in the summary, the system is very limited. Both from a data perspective and a value-sensitive design perspective.
 
-First, the metadata doesn't have a lot of useful features that might be important for the model. The metadata that has been provided lacks some important features that might be helpful to create a more precise recommendation. There might be also redundancy in the features from the description cluster and category.
+First, the metadata doesn't have a lot of useful features that might be important for the model. The metadata that has been provided lacks some important features that might be helpful to create a more precise recommendation. There might be also redundancy in the features from the cluster of description and category.
 
 Second, the lack of data from the user makes the consideration of the value from the user as a stakeholder has been ignored. Because the generated metadata has been scrapped from only what users can see on the service provider, it might be ignoring what the service provider can see on their user.
 
