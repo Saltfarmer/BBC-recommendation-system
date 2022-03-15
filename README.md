@@ -6,7 +6,7 @@ by Gama Candra Tri Kartika (1088017)
 
 ## Introduction
 
-Recommender systems aim to predict users' interests and recommend stuff that is interesting for the user. Data are required for recommender systems from either from the user (collaborative filtering), service provider (content-based filtering), or both (hybrid filtering).  In this project, I am trying to create a prototype of a recommendation system based on the articles from BBC.
+Recommender systems aim to predict user's interests and recommend stuff that is interesting for the user. Data are required for recommender systems from either from the user (collaborative filtering), service provider (content-based filtering), or both (hybrid filtering).  In this project, I am trying to create a prototype of a recommendation system based on the articles from BBC.
 
 The British Broadcasting Corporation (BBC) is the national broadcaster of the United Kingdom. Headquartered at Broadcasting House in London, it is the world's oldest national broadcaster, and the largest broadcaster in the world by the number of employees, employing over 22,000 staff in total, of whom approximately 19,000 are in public-sector broadcasting. They produce programs and services for audiences throughout the UK. They also produce content that can be enjoyed across the globe.
 
@@ -16,44 +16,44 @@ In this recommender system prototype, I am trying to apply transparency and cont
 
 ## Literature Reviews
 
-The content-based news recommendation system is already has been researched by [Kompan & Bielikova, 2010](Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.). The paper recommendation system uses Title, Article content, Names & Places, Keywords, Category, and Coleman-Liau Index (CLI). For the recommendation part, they use Cosine-Similarity as similarity measurement as a recommendation of one article to another article. In my case, I am using K-Means clustering as a recommendation for the related content. 
+The content-based news recommendation system is already has been researched by [Kompan & Bielikova, 2010](Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.). The paper recommendation system uses Title, Article content, Names & Places, Keywords, Category, and Coleman-Liau Index (CLI). For the recommendation part, they use Cosine-Similarity as similarity measurement as a recommendation of one article to another article. In my case, I am using **K-Means clustering ** as a recommendation for the related content. 
 
-From the perspective of BBC as a provider, based on the [2020-2021 Annual Report](https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf#page=20) I can get the value from the provider. According to the report, there are 5 things to measure audience performance started from. One of them is to **provide impartial news and information to help people to understand and engage with the world around them**.  In this recommendation system, it will provide you with more engaging news and interesting news depending either on only same cluster or same cluster and same category. 
+From the perspective of BBC as a provider, based on the [2020-2021 Annual Report](https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf#page=20) I can get the value from the provider. According to the report, there are 5 things to measure audience performance started from. One of them is to **provide impartial news and information to help people to understand and engage with the world around them**.  This recommendation system will provide you with more engaging news and interesting news depending either on only the same cluster or the same cluster and the same category. 
 
 From the survey of [Public Opinion on the BBC and BBC News](https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf), **trustworthiness is one of the most important values that influence the user to choose a news provider**. With an explanation of the system, users can see the transparency of how the users can choose their recommendations. This will create a sense of trustworthiness towards the recommendation system.
 
 ## Method
 
-The very first step I choose the value that I need to consider when creating the prototype of the Recommendation System.  Here there are two main stakeholders that I consider when creating the prototype. The service provider which is BBC and the user. Then I look for the value from those two. From the service provider perspective, they value providing the creative, highest quality, and distinctive output and services to users. From the user perspective, they consider trustworthiness and transparency.
+The very first step I choose the value that I need to consider when creating the prototype of the Recommendation System.  Here there are two main stakeholders that I consider when creating the prototype. The service provider is BBC and the user. Then I look for the value from those two. From the service provider perspective, they value providing the creative, highest quality, and distinctive output and services to users. From the user perspective, they consider trustworthiness and transparency.
 
-The next step is to gather all of the metadata that might be useful for my recommendation system. Starting from the Title, Description, Images, Url, Category, and Keywords. I am using the `BeautifulSoup4` library to get all metadata from all the articles that have been gathered or provided before (credit to Mr. Heikmann). Then I save all the metadata from all articles to process it later as a recommendation system later as a Comma SeparableValue filess.
+The next step is to gather all of the metadata that might be useful for my recommendation system. Starting from the Title, Description, Images, Url, Category, and Keywords. I am using the `BeautifulSoup4` library to get all metadata from all the articles that have been gathered or provided beforehand. Then I save all the metadata from all articles to process it later as a recommendation system later as a Comma Separable Value file.
 
-The final step is I put the design of my recommendation system that has in mind into the code using `Streamlit`. In the system, first I provide the user with a completely random recommendation as a starter. Then using K-Means clustering, I am trying to provide the user the recommendation from BBC content according to cluster and the genre of the article. K-Means clustering create `k` cluster from vectorized value from the description of the content.
+The final step is I put the design of my recommendation system that has in mind into the code using `Streamlit`. In the system, first I provide the user with a completely random recommendation as a starter. Then using K-Means clustering, I am trying to provide the user the recommendation from BBC content according to cluster and the genre of the article. K-Means clustering creates a `k` cluster value from vectorized value from the description of the content.
 
 The clustering itself works by the `k` cluster that the user is free to choose starts from 2-10 clusters. Then, the system will vectorize the description of the article with TF-IDF vectorization of all articles. The vectorized words are important for the program to understand the value of words on every article. The values then can be used for the K-Means algorithm to create a cluster.
 
 ## Interface Design
 
-![image](img_1.png)
 
-First, the system will show the user completey a random recommendation of content from BBC. The interface will show the user the poster, title, small description, keyword of the content, and an option to watch the content if the user is interested in the recommendation. This interface will work as the starting point of the other recommendations.
 
-![image](img_2.png)
+First, the system will show the user complete a random recommendation of content from BBC. The interface will show the user the poster, title, small description, keyword of the content, and an option to watch the content if the user is interested in the recommendation. This interface will work as the starting point of the other recommendations.
+
+
 
 The second part is where when the user gives their transparency and control. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and control how many clusters did they choose on K-means clustering
 
-![image](img_3.png)
+
 
 Then the last part shows 5 random recommendations for the user which have a similar description and the same category that the user chooses. Given more recommendations and more controls from the user. 
 
 ## Conclusion
 
-So in the summary, the system is very limited. Both from a data perspective and value-sensitive design perspective.
+So in the summary, the system is very limited. Both from a data perspective and a value-sensitive design perspective.
 
 First, the metadata doesn't have a lot of useful features that might be important for the model. The metadata that has been provided lacks some important features that might be helpful to create a more precise recommendation. There might be also redundancy in the features from the description cluster and category.
 
 Second, the lack of data from the user makes the consideration of the value from the user as a stakeholder has been ignored. Because the generated metadata has been scrapped from only what users can see on the service provider, it might be ignoring what the service provider can see on their user.
 
-Third, there is no application on value from service provider stakeholders. The information itself is not publicly open without doing a survey on the service provider opinion regarding of what is their actual value.
+Third, there is no application on value from service provider stakeholders. The information itself is not publicly open without doing a survey on the service provider's opinion regarding of what is their actual value.
 
 ## Reference
