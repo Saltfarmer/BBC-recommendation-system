@@ -20,6 +20,8 @@ The content-based news recommendation system is already has been researched by [
 
 From the perspective of BBC as a provider, based on the [2020-2021 Annual Report](https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf#page=20) I can get the value from the provider. According to the report, there are 5 things to measure audience performance started from. One of them is to **provide impartial news and information to help people to understand and engage with the world around them**.  This recommendation system will provide you with more engaging news and interesting news depending either on only the same cluster or the same cluster and the same category. 
 
+Using the Value Sensitive Design (VSD) method as a point of departure, [Jacob, et al, 2020](Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham. ) explores how VSD can be used in the context of transparency. More precisely, it is investigated if the VSD Envisioning Cards facilitate transparency as a pro-ethical condition. Therefore, it is proposed that a transparency card be added to the Envisioning Card deck. **It is concluded that a lightweight version of VSD seems useful in engaging larger audiences**. Which means the transparency value also helps the value from BBC perspective as a stakeholder.
+
 From the survey of [Public Opinion on the BBC and BBC News](https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf), **trustworthiness is one of the most important values that influence the user to choose a news provider**. With an explanation of the system, users can see the transparency of how the users can choose their recommendations. This will create a sense of trustworthiness towards the recommendation system.
 
 ## Method
@@ -57,3 +59,11 @@ Second, the lack of data from the user makes the consideration of the value from
 Third, there is no application on value from service provider stakeholders. The information itself is not publicly open without doing a survey on the service provider's opinion regarding of what is their actual value.
 
 ## Reference
+
+1. Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.
+
+2. https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf
+
+3. Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham.
+
+4. https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf
