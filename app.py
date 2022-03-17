@@ -57,8 +57,6 @@ tfidf = tfidf_vectorizer.fit_transform(list_description)
 kmeans = KMeans(n_clusters=cluster).fit(tfidf)
 df['cluster'] = kmeans.labels_
 
-# st.dataframe(df.head(10))
-
 # Showing recommendation according to random same cluster
 sample1 = df[df['cluster'] == df['cluster'].iloc[key]].sample(n=5)
 
@@ -94,4 +92,4 @@ for i in range(5):
       st.button(sample2['title'].iloc[i], on_click=keychanger, args=(keymaker, ))
       st.image(sample2['image'].iloc[i])
 
-st.caption("source-code : https://github.com/Saltfarmer/BBC-recommendation-system")
+st.caption("source-code : https://github.com/Saltfarmer/BBC-recommendation-system"
