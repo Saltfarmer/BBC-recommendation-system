@@ -6,21 +6,25 @@ by Gama Candra Tri Kartika (1088017)
 
 ## Introduction
 
-Recommender systems aim to predict user's interests and recommend stuff that is interesting for the user. Data are required for recommender systems from either from the user (collaborative filtering), service provider (content-based filtering), or both (hybrid filtering).  In this project, I am trying to create a prototype of a recommendation system based on the articles from BBC.
+Recommender systems aim to predict users interests and recommend stuff that is interesting for the user. Data are required for recommender systems from either from the user (collaborative filtering), service provider (content-based filtering), or both (hybrid filtering).  In this project, I am trying to create a prototype of a recommendation system based on the articles from BBC.
 
 The British Broadcasting Corporation (BBC) is the national broadcaster of the United Kingdom. Headquartered at Broadcasting House in London, it is the world's oldest national broadcaster, and the largest broadcaster in the world by the number of employees, employing over 22,000 staff in total, of whom approximately 19,000 are in public-sector broadcasting. They produce programs and services for audiences throughout the UK. They also produce content that can be enjoyed across the globe.
 
 There are many stakeholders from BBC started from their service provider, viewer/user/reader, Board of Executives, Commercial Provider, and a lot of stakeholders that need to be mentioned. In this project, the main stakeholders are The service provider and the viewer. The service provider in this case is the one who provides BBC the content of the news or informative videos. On the other hand, the viewer is the one who enjoys and watches the content that has been provided by BBC.
 
-In this recommender system prototype, I am trying to apply transparency and controls for the user to choose or manipulate the recommendation they could get. The recommender will be provided only by the content from BBC metadata that has been scrapped before. Then the system starts recommending random recommendations at first and then the next recommendation is adjusted by the user.
+In this recommender system prototype, I am trying to apply transparency and autonomy for the user to choose or manipulate the recommendation they could get. The recommender will be provided only by the content from BBC metadata that has been scrapped before. Then the system starts recommending random recommendations at first and then the next recommendation is adjusted by the user.
 
 ## Literature Reviews
 
 The content-based news recommendation system is already has been researched by [Kompan & Bielikova, 2010](Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.). The paper recommendation system uses Title, Article content, Names & Places, Keywords, Category, and Coleman-Liau Index (CLI). For the recommendation part, they use Cosine-Similarity as similarity measurement as a recommendation of one article to another article. In my case, **I am using K-Means clustering as a recommendation for the related content**. 
 
+[Kim & Ahn, 2008](Kim, K. J., & Ahn, H. (2008). A recommender system using GA K-means clustering in an online shopping market. *Expert systems with applications*, *34*(2), 1200-1209.) did a recommender system using K-Means. the result is that **K-means clustering may improve segmentation performance in comparison to other typical clustering algorithms**. In addition, their study validated the usefulness of the proposed model as a preprocessing tool for recommendation systems.
+
 From the perspective of BBC as a provider, based on the [2020-2021 Annual Report](https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf#page=20) I can get the value from the provider. According to the report, there are 5 things to measure audience performance started from. One of them is to **provide impartial news and information to help people to understand and engage with the world around them**.  This recommendation system will provide you with more engaging news and interesting news depending either on only the same cluster or the same cluster and the same category. 
 
-Using the Value Sensitive Design (VSD) method as a point of departure, [Jacob, et al, 2020](Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham. ) explores how VSD can be used in the context of transparency. More precisely, it is investigated if the VSD Envisioning Cards facilitate transparency as a pro-ethical condition. Therefore, it is proposed that a transparency card be added to the Envisioning Card deck. **It is concluded that a lightweight version of VSD seems useful in engaging larger audiences**. Which means the transparency value also helps the value from BBC perspective as a stakeholder.
+According to [Friedman, 1996](Friedman, B. (1996). Value-sensitive design. *interactions*, *3*(6), 16-23.) minimizing bias when considering user autonomy in a design also likely **leads to a larger market share** because such systems are typically accessible to a greater diversity of users. This also helps and is related to other values that the service provider likes to get.
+
+Using the Value Sensitive Design (VSD) method as a point of departure, [Jacob, et al, 2020](Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham. ) explores how VSD can be used in the context of transparency. More precisely, it is investigated if the VSD Envisioning Cards facilitate transparency as a pro-ethical condition. Therefore, it is proposed that a transparency card be added to the Envisioning Card deck. **It is concluded that a lightweight version of VSD seems useful in engaging larger audiences**. This means the transparency value also helps the value from BBC's perspective as a stakeholder.
 
 From the survey of [Public Opinion on the BBC and BBC News](https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf), **trustworthiness is one of the most important values that influence the user to choose a news provider**. With an explanation of the system, users can see the transparency of how the users can choose their recommendations. This will create a sense of trustworthiness towards the recommendation system.
 
@@ -46,7 +50,7 @@ The next step of recommendation system is to show complete a random recommendati
 
 ![image](img-3.png)
 
-The second part is where when the user gives their transparency and control. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and control how many clusters did they choose on K-means clustering. Later o,n it will show another sample of clustered data.
+The second part is where when the user gives their transparency and autonomy. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and autonomy how many clusters did they choose on K-means clustering. Later on it will show another sample of clustered data.
 
 ![image](img-4.png)
 
@@ -54,7 +58,7 @@ In this part, the recommendation system will give you 5 random recommendations b
 
 ![image](img-5.png)
 
-Finally, the user also can get a different type of recommendation looking at the same category of content. It will give the user more recommendations and more controls from user.
+Finally, the user also can get a different type of recommendation looking at the same category of content. It will give the user more recommendations and more autonomy from the user.
 
 ## Conclusion
 
@@ -70,8 +74,12 @@ Third, there is no application on value from service provider stakeholders. The 
 
 1. Kompan, M., & Bieliková, M. (2010, September). Content-based news recommendation. In *International conference on electronic commerce and web technologies* (pp. 61-72). Springer, Berlin, Heidelberg.
 
-2. https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf
+2. Kim, K. J., & Ahn, H. (2008). A recommender system using GA K-means clustering in an online shopping market. *Expert systems with applications*, *34*(2), 1200-1209.
 
-3. Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham.
+3. https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf
 
-4. https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf
+4. Friedman, B. (1996). Value-sensitive design. *interactions*, *3*(6), 16-23.
+
+5. Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham.
+
+6. https://www.ofcom.org.uk/data/assets/pdf_file/0014/58001/bbc-annex2.pdf
