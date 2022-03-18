@@ -22,7 +22,7 @@ The content-based news recommendation system is already has been researched by [
 
 From the perspective of BBC as a provider, based on the [2020-2021 Annual Report](https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf#page=20) I can get the value from the provider. According to the report, there are 5 things to measure audience performance started from. One of them is to **provide impartial news and information to help people to understand and engage with the world around them**.  This recommendation system will provide you with more engaging news and interesting news depending either on only the same cluster or the same cluster and the same category. 
 
-According to [Friedman, 1996](Friedman, B. (1996). Value-sensitive design. *interactions*, *3*(6), 16-23.) minimizing bias when considering ****user autonomy in a design also likely leads to a larger market share** because such systems are typically accessible to a greater diversity of users. This also helps and is related to other values that the service provider likes to get.
+According to [Friedman, 1996](Friedman, B. (1996). Value-sensitive design. *interactions*, *3*(6), 16-23.) minimizing bias when considering **user autonomy in a design also likely leads to a larger market share** because such systems are typically accessible to a greater diversity of users. This also helps and is related to other values that the service provider likes to get.
 
 Using the Value Sensitive Design (VSD) method as a point of departure, [Jacob, et al, 2020](Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham. ) explores how VSD can be used in the context of transparency. More precisely, it is investigated if the VSD Envisioning Cards facilitate transparency as a pro-ethical condition. Therefore, it is proposed that a transparency card be added to the Envisioning Card deck. **It is concluded that a lightweight version of VSD seems useful in engaging larger audiences**. This means the transparency value also helps the value from BBC's perspective as a stakeholder.
 
@@ -50,7 +50,7 @@ The next step of recommendation system is to show complete a random recommendati
 
 ![image](img-3.png)
 
-The second part is where when the user gives their transparency and autonomy. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and autonomy how many clusters did they choose on K-means clustering. Later on it will show another sample of clustered data.
+The second part is where when the user gives their transparency and autonomy. The transparency part is when the user already explained how is the recommendation system going to work. And then the user could choose a specific value and autonomy how many clusters did they choose on K-means clustering. Later on, it will show another sample of clustered data.
 
 ![image](img-4.png)
 
@@ -76,10 +76,10 @@ Third, there is no application on value from service provider stakeholders. The 
 
 2. Kim, K. J., & Ahn, H. (2008). A recommender system using GA K-means clustering in an online shopping market. *Expert systems with applications*, *34*(2), 1200-1209.
 
-3. https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf
+3. *BBC group annual report and accounts 2020/21*. (2021). Https://Www.Bbc.Com/. Retrieved March 18, 2022, from https://downloads.bbc.co.uk/aboutthebbc/reports/annualreport/2020-21.pdf
 
 4. Friedman, B. (1996). Value-sensitive design. *interactions*, *3*(6), 16-23.
 
 5. Dexe, J., Franke, U., Nöu, A. A., & Rad, A. (2020, July). Towards increased transparency with value sensitive design. In *International Conference on Human-Computer Interaction* (pp. 3-15). Springer, Cham.
 
-6. https://www.ofcom.org.uk/data/assets/pdf_file/0014/58001/bbc-annex2.pdf
+6. *Public opinion on the BBC and BBC news*. (2011b, November). Https://Www.Ofcom.Org.Uk/. Retrieved March 18, 2022, from https://www.ofcom.org.uk/__data/assets/pdf_file/0014/58001/bbc-annex2.pdf
