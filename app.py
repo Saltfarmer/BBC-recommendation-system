@@ -92,4 +92,4 @@ for i in range(5):
       st.button(sample2['title'].iloc[i], on_click=keychanger, args=(keymaker, ))
       st.image(sample2['image'].iloc[i])
 
-st.caption("source-code : https://github.com/Saltfarmer/BBC-recommendation-system"
+st.caption("source-code : https://github.com/Saltfarmer/BBC-recommendation-system")
