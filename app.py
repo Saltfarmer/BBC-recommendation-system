@@ -10,6 +10,7 @@ st.set_page_config(layout="wide")
 
 df = pd.read_csv('BBC_metadata.csv')
 
+# Create an explanation for the user and make some transparency where do i get the data
 st.title("Where the recommendation came from ?")
 st.markdown("The data is gathered from [BBC](https://www.bbc.co.uk/iplayer). gather all of the metadata that might be useful for my recommendation system. Starting from the `Title`, `Description`, `Images`, `Url`, `Category`, and `Keywords`. I am using the `BeautifulSoup4` library to get all metadata from all the articles that have been gathered or provided before. Then I save all the metadata from all articles to process it later as a recommendation system later as a Comma Separable Value files. Here is the example of what the metadata looks like.")
 st.dataframe(df.sample(5))
@@ -36,14 +37,17 @@ with info:
   st.markdown("# [Watch It](" + df['url'].iloc[key] + ")", unsafe_allow_html=True)
   st.caption("Keywords : " + df['keywords'].iloc[key])
 
-# Clustering 
+# Clustering
+# Explaining clustering to user 
 st.title("Recommendation with clustering")
 st.header("How does it works ? ")
 st.markdown("The systems works by randomly recommending based on clustering with K-Means and the specific category that user choose. The idea of k-means is that we assume there are k groups in our dataset. We then try to group the data into those k groups. Each group is described by a single point known as a centroid. The centroid of a cluster is the mean value of the points within the cluster. In this case as a user, you are free to choose the number of `k` cluster. The user can choose the number of cluster depends on how many cluster would be in all of the contents of BBC. Later on the system will consider your input on the number of cluster and category to create recommendations.")
 
 # Clustering process
+# Make the user choose the number of cluster
 cluster = st.slider("Choose number of clusters", 2, 10, value=5)
 
+# Make a list of desciption
 list_description = df['description'].tolist()
 
 # filter non-string plots 
@@ -52,9 +56,13 @@ list_description = [description for description in list_description if type(desc
 def preprocess(text):
     return text.translate(str.maketrans('', '', string.punctuation))
 
+# Vectorize the list of description
 tfidf_vectorizer = TfidfVectorizer(preprocessor=preprocess, lowercase=True, stop_words='english')
 tfidf = tfidf_vectorizer.fit_transform(list_description)
+
+# Create a clustering with kmeans
 kmeans = KMeans(n_clusters=cluster).fit(tfidf)
+# Assign kmeans labels inton the features of dataset
 df['cluster'] = kmeans.labels_
 
 # Showing recommendation according to random same cluster
@@ -77,6 +85,7 @@ for i in range(5):
       st.image(sample1['image'].iloc[i])
 
 st.title("5 Recommendation based on description cluster and category")
+
 # Let user choose the category
 st.markdown("You can also choose of some specific category that you want.")
 choice = st.selectbox("Choose the category", df['category'].unique().tolist(), index=df['category'].unique().tolist().index(df['category'].iloc[key]))
